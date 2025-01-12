@@ -59,7 +59,7 @@ Click the trash icon to delete a task from the list.
 All tasks are stored in MongoDB, ensuring they persist across sessions.
 
 ## **Folder Structure**
-
+```
 ├── backend
 │   ├── index.js          # Backend server
 │   ├── Models
@@ -73,6 +73,7 @@ All tasks are stored in MongoDB, ensuring they persist across sessions.
 │   │   ├── index.css     # CSS styles
 │   │   └── main.jsx      # React entry point
 │   └── package.json      # Frontend dependencies
+```
 
 ## **API Endpoints**
 
