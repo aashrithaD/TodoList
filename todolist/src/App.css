@@ -1,0 +1,180 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home {
+  width: 400px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Header */
+.home h2 {
+  font-size: 26px;
+  color: #444;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Task Container */
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  background: #f1f1f1;
+}
+
+/* Checkbox Area */
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox .icon {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.checkbox .icon:hover {
+  color: #00d084;
+}
+
+/* Task Text */
+.checkbox p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.line_through {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+/* Trash Icon */
+.task div span .icon {
+  font-size: 20px;
+  color: #dc3545;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.task div span .icon:hover {
+  color: #bd2130;
+  transform: scale(1.2);
+}
+
+/* Create Form */
+.create_form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.create_form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  margin-right: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create_form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+}
+
+.create_form button {
+  padding: 10px 15px;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.create_form button:hover {
+  background: linear-gradient(to right, #ff6a3d, #e02d8a);
+  transform: scale(1.05);
+}
+
+/* No Record Message */
+.home > div {
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Scrollable Todo List (if items exceed container height) */
+.home {
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #007bff #f1f1f1;
+}
+
+.home::-webkit-scrollbar {
+  width: 8px;
+}
+
+.home::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 8px;
+}
+
+.home::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
